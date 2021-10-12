@@ -1,19 +1,5 @@
 /*
  *  OV767X.cpp
- *  Copyright 2021 ItJustWorksTM
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- *
  */
 
 #include <array>
@@ -35,14 +21,6 @@ OV767X::~OV767X() = default;
 
 void OV767X::setPins([[maybe_unused]] int vsync, [[maybe_unused]] int href, [[maybe_unused]] int pclk,
                      [[maybe_unused]] int xclk, [[maybe_unused]] const int dpins[8]) {}
-
-/*
- * VGA = 0,  // 640x480
- * CIF = 1,  // 352x240
- * QVGA = 2, // 320x240
- * QCIF = 3,  // 176x144
- * QQVGA = 4,  // 160x120
- */
 
 constexpr std::array<std::pair<uint16_t, uint16_t>, 5> resolutions{{
     {640, 480},
